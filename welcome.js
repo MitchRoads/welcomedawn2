@@ -42,14 +42,11 @@ client.on('guildMemberRemove', (member, message) => {
 	
   let guild = member.guild;
   let server = member.guild.name;
-let user = message.mentions.users.first(); 
   let logs = guild.channels.find(c => c.name === 'logs');
   let gembed = new Discord.RichEmbed()
       .setTitle("User Departure")
       .setColor("#000000")
       .setDescription(`Too bad that ${member} has decided to go, maybe one day you'll return to us. But for now, au revoir.`)
-      .setFooter(user.displayAvatarURL)
-      .setThumbnail(user.displayAvatarURL)
       .setTimestamp()
   logs.send(gembed);
 	      });	
