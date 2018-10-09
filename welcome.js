@@ -49,4 +49,5 @@ client.on('guildMemberRemove', (member) => {
       .setDescription(`Too bad that ${member} has decided to go, maybe one day you'll return to us. But for now, au revoir.`)
       .setTimestamp()
   logs.send(gembed);
-	      });
+	      });	
+client.login(process.env.BOT_TOKEN);
