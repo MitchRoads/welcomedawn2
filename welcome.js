@@ -38,7 +38,7 @@ member.addRole(`456990891987697675`);
   welcome.send(gembed);
 	      });
 
-client.on('guildMemberRemove', (member, message, user) => {
+client.on('guildMemberRemove', (member, message) => {
 	
   let guild = member.guild;
   let server = member.guild.name;
