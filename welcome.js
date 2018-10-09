@@ -38,10 +38,11 @@ member.addRole(`456990891987697675`);
   welcome.send(gembed);
 	      });
 
-client.on('guildMemberRemove', (member, user) => {
+client.on('guildMemberRemove', (member, message, user) => {
 	
   let guild = member.guild;
   let server = member.guild.name;
+let user = message.mentions.users.first(); 
   let logs = guild.channels.find(c => c.name === 'logs');
   let gembed = new Discord.RichEmbed()
       .setTitle("User Departure")
