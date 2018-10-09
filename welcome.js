@@ -28,11 +28,11 @@ client.on('guildMemberAdd', (member) => {
 	
   let guild = member.guild;
   let server = member.guild.name;
-member.addRole(`456990891987697675`);
+member.addRole("name", "Clanners");
   let welcome = guild.channels.find(c => c.name === 'welcome');
   let gembed = new Discord.RichEmbed()
       .setTitle("User Enterance")
-      .setColor("#c2c5ea")
+      .setColor("#000000")
       .setDescription(`Welcome ${member}, to **${server}**, hope you enjoy your stay.`)
       .setTimestamp()
   welcome.send(gembed);
@@ -45,7 +45,7 @@ client.on('guildMemberRemove', (member) => {
   let logs = guild.channels.find(c => c.name === 'logs');
   let gembed = new Discord.RichEmbed()
       .setTitle("User Departure")
-      .setColor("#c2c5ea")
+      .setColor("#000000")
       .setDescription(`Too bad that ${member} has decided to go, maybe one day you'll return to us. But for now, au revoir.`)
       .setTimestamp()
   logs.send(gembed);
