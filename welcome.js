@@ -38,7 +38,7 @@ member.addRole(`456990891987697675`);
   welcome.send(gembed);
 	      });
 
-client.on('guildMemberRemove', (member) => {
+client.on('guildMemberRemove', (member, user) => {
 	
   let guild = member.guild;
   let server = member.guild.name;
@@ -47,6 +47,9 @@ client.on('guildMemberRemove', (member) => {
       .setTitle("User Departure")
       .setColor("#000000")
       .setDescription(`Too bad that ${member} has decided to go, maybe one day you'll return to us. But for now, au revoir.`)
+      .setFooter(user.id, user.displayAvatarURL)
+      .setThumbnail(user.displayAvatarURL)
+ 
       .setTimestamp()
   logs.send(gembed);
 	      });	
