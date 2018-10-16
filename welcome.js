@@ -37,7 +37,7 @@ if(!user) return message.channel.send("You haven't selected/mentioned a user who
     .addField("Users", client.users.size, true)
     .addField("Created At", client.user.createdAt, true)
     .addField("Uptime", moment.duration(client.uptime).format('d[d ]h[h ]m[m ]s[s]'), true)
-    .setFooter("Created By @Dawn.Bots.INC", client.displayAvatarURL)
+    .setFooter("Created By @Dawn.Bots.INC", client.user.displayAvatarURL)
     .setTimestamp();
     return message.channel.send(botembed);
   }      
