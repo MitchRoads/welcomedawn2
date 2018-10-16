@@ -22,26 +22,6 @@ if(!user) return message.channel.send("You haven't selected/mentioned a user who
     .setTimestamp(new Date());
     message.channel.send(avatarEmbed);
 }
-	
-	 if (message.content.startsWith(`${prefix}botinfo`)) {
-
-    let bicon = client.user.displayAvatarURL;
-    let botembed = new Discord.RichEmbed()
-    .setTitle("Bot Information")
-    .setDescription("Information on WeatherDawn:")
-    .setColor(0x374f6b)
-    .setThumbnail(bicon)
-    .addField("Bot Name", client.user.username, true)
-    .addField("Bot Tag", client.user.tag, true)
-    .addField("Guilds", client.guilds.size, true)
-    .addField("Users", client.users.size, true)
-    .addField("Created At", client.user.createdAt, true)
-    .addField("Uptime", moment.duration(client.uptime).format('d[d ]h[h ]m[m ]s[s]'), true)
-    .setFooter("Created By @Dawn.Bots.INC", client.user.displayAvatarURL)
-    .setTimestamp();
-    return message.channel.send(botembed);
-  }      
-});
 
 client.on('guildMemberAdd', (member) => {
 	
