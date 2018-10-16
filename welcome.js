@@ -41,7 +41,7 @@ if(!user) return message.channel.send("You haven't selected/mentioned a user who
     .setTimestamp();
     return message.channel.send(botembed);
   }      
-	   });
+});
 
 client.on('guildMemberAdd', (member) => {
 	
