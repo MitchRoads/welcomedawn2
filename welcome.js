@@ -22,6 +22,7 @@ if(!user) return message.channel.send("You haven't selected/mentioned a user who
     .setTimestamp(new Date());
     message.channel.send(avatarEmbed);
 }
+});
 
 client.on('guildMemberAdd', (member) => {
 	
