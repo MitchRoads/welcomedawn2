@@ -6,7 +6,7 @@ const { prefix, token } = require('./botconfig.json');
 
 client.on(`ready`, () => {
   console.log(`I am ready to welcome!`);
-client.user.setActivity('At The Strike Of DAWN: Season 1');
+client.user.setActivity('Welcoming Users | :avatar');
 
 });
 
