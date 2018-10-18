@@ -21,7 +21,7 @@ if(!user) return message.channel.send("You haven't selected/mentioned a user who
     .setAuthor(`${user.username}'s Profile Picture`)
     .setImage(user.displayAvatarURL)
     .setColor("#ea9b67")
-    .setTimestamp(new Date());
+    .setTimestamp();
     message.channel.send(avatarEmbed);
 }
 	
@@ -31,7 +31,7 @@ if(!user) return message.channel.send("You haven't selected/mentioned a user who
     let botembed = new Discord.RichEmbed()
     .setTitle("🤖 Bot Information")
     .setDescription("Information on WeatherDawn:")
-    .setColor(0x374f6b)
+    .setColor("#ea9b67")
     .setThumbnail(bicon)
     .addField("Name", client.user.username, true)
     .addField("Tag", client.user.tag, true)
