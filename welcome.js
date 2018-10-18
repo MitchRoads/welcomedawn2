@@ -8,7 +8,7 @@ require('moment-duration-format');
 
 client.on(`ready`, () => {
   console.log(`I am ready to welcome!`);
-client.user.setActivity('Welcoming Users | :avatar');
+client.user.setActivity('Welcoming Users | :avatar | :info');
 
 });
 
@@ -25,7 +25,7 @@ if(!user) return message.channel.send("You haven't selected/mentioned a user who
     message.channel.send(avatarEmbed);
 }
 	
-	if (message.content.startsWith(`${prefix}botinfo`)) {
+	if (message.content.startsWith(`${prefix}info`)) {
 
     let bicon = client.user.displayAvatarURL;
     let botembed = new Discord.RichEmbed()
