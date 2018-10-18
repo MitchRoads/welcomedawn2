@@ -25,7 +25,7 @@ if(!user) return message.channel.send("You haven't selected/mentioned a user who
     message.channel.send(avatarEmbed);
 }
 	
-	if (message.content.startsWith(`${prefix}info`)) {
+	if (message.content.startsWith(`${prefix}botinfo`)) {
 
     let bicon = client.user.displayAvatarURL;
     let botembed = new Discord.RichEmbed()
@@ -36,7 +36,7 @@ if(!user) return message.channel.send("You haven't selected/mentioned a user who
     .addField("Name", client.user.username, true)
     .addField("Tag", client.user.tag, true)
     .addField("ID", client.user.id, true)
-    .addField("Lives In", `${client.guilds.size} guilds.`, true)
+    .addField("Lives In", `${client.guilds.size} guilds`, true)
     .addField("Welcoming", `Over ${client.users.size} users`, true)
     .addField("Date Of Creation", client.user.createdAt.toLocaleDateString(), true)
     .addField("Last Update", `${moment.duration(client.uptime).format('d[d ]h[h ]m[m ]s[s]')} ago`, true)
