@@ -3,6 +3,8 @@ const client = new Discord.Client();
 const request = require('snekfetch');
 const config = require('./botconfig.json');
 const { prefix, token } = require('./botconfig.json');
+const moment = require('moment');
+require('moment-duration-format');
 
 client.on(`ready`, () => {
   console.log(`I am ready to welcome!`);
@@ -22,6 +24,28 @@ if(!user) return message.channel.send("You haven't selected/mentioned a user who
     .setTimestamp(new Date());
     message.channel.send(avatarEmbed);
 }
+	
+	if (message.content.startsWith(`${prefix}botinfo`)) {
+
+    let bicon = client.user.displayAvatarURL;
+    let botembed = new Discord.RichEmbed()
+    .setTitle("🤖 Bot Information")
+    .setDescription("Information on WeatherDawn:")
+    .setColor(0x374f6b)
+    .setThumbnail(bicon)
+    .addField("Name", client.user.username, true)
+    .addField("Tag", client.user.tag, true)
+    .addField("ID", client.user.id, true)
+    .addField("Owned By", `${client.guilds.size} of @Dawn.Bots.INC guilds.`, true)
+    .addField("Welcoming", `Over ${client.users.size} users.`, true)
+    .addField("Date Of Creation", client.user.createdAt.toLocaleDateString(), true)
+    .addField("Last Update", `${moment.duration(client.uptime).format('d[d ]h[h ]m[m ]s[s]')} ago`, true)
+    .addField("Discord.js Version", "discord.js 11.4.2", true)
+    .addField("Dawn Public Server", "https://discord.gg/wz4NnZk", true)
+    .setFooter("Created By @Dawn.Bots.INC", client.user.displayAvatarURL)
+    .setTimestamp();
+    return message.channel.send(botembed);
+  }      
 });
 
 client.on('guildMemberAdd', (member) => {
