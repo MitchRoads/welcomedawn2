@@ -8,7 +8,7 @@ require('moment-duration-format');
 
 client.on(`ready`, () => {
   console.log(`I am ready to welcome!`);
-client.user.setActivity('Welcoming Users | :avatar | :info');
+client.user.setActivity('Welcoming Users | :avatar | :botinfo');
 
 });
 
@@ -36,8 +36,8 @@ if(!user) return message.channel.send("You haven't selected/mentioned a user who
     .addField("Name", client.user.username, true)
     .addField("Tag", client.user.tag, true)
     .addField("ID", client.user.id, true)
-    .addField("Owned By", `${client.guilds.size} of @Dawn.Bots.INC guilds.`, true)
-    .addField("Welcoming", `Over ${client.users.size} users.`, true)
+    .addField("Lives In", `${client.guilds.size} guilds.`, true)
+    .addField("Welcoming", `Over ${client.users.size} users`, true)
     .addField("Date Of Creation", client.user.createdAt.toLocaleDateString(), true)
     .addField("Last Update", `${moment.duration(client.uptime).format('d[d ]h[h ]m[m ]s[s]')} ago`, true)
     .addField("Discord.js Version", "discord.js 11.4.2", true)
