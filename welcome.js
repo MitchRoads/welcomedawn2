@@ -30,7 +30,7 @@ if(!user) return message.channel.send("You haven't selected/mentioned a user who
     let bicon = client.user.displayAvatarURL;
     let botembed = new Discord.RichEmbed()
     .setTitle("🤖 Bot Information")
-    .setDescription("Information on WeatherDawn:")
+    .setDescription("Information on WelcomeDawn:")
     .setColor("#ea9b67")
     .setThumbnail(bicon)
     .addField("Name", client.user.username, true)
